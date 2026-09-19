@@ -1,6 +1,6 @@
 # Omni Pad
 
-Omni Pad is a compact 3×4 macropad PCB with 12 MX-compatible keys, two push-capable rotary encoders, and addressable RGB underglow. It is built around an RP2040 Zero and is intended for custom shortcuts, media controls, editing workflows, and other keyboard automation.
+Omni Pad is a compact 3×4 macropad PCB with 12 MX-compatible keys, two push-capable rotary encoders, and addressable RGB underglow. It is built around an RP2040 Zero and is intended for custom short-circuit- and power-sensitive keyboard builds.
 
 > **Hardware revision:** The KiCad design and manufacturing outputs are named `macropad_v3`, while this repository is the `omnipad_v4` project.
 
@@ -29,7 +29,8 @@ Omni Pad is a compact 3×4 macropad PCB with 12 MX-compatible keys, two push-cap
     │   ├── macropad_v3.kicad_pro   KiCad project
     │   ├── macropad_v3.kicad_sch   Schematic
     │   └── macropad_v3.kicad_pcb   PCB layout
-    └── manufacture/          Gerbers and drill files
+    └── gerber/               Gerber archive for manufacturing
+        └── gerbers.zip       PCB manufacturing ZIP
 ```
 
 ## Bill of materials
@@ -55,14 +56,14 @@ Open `pcb/kicad/macropad_v3.kicad_pro` with KiCad. Use the schematic to review t
 
 ### 2. Order the PCB
 
-Upload the files in [`pcb/manufacture/`](pcb/manufacture/) to your PCB manufacturer. The directory includes:
+Download the manufacturing archive at [`pcb/gerber/gerbers.zip`](pcb/gerber/gerbers.zip). The ZIP contains:
 
 - Copper, solder-mask, paste, and silkscreen Gerbers
 - Board outline (`macropad_v3-Edge_Cuts.gbr`)
 - PTH and NPTH drill files
 - The Gerber job file
 
-If your manufacturer supports it, upload the complete manufacturing directory as a ZIP so the layer and drill files stay together.
+If your manufacturer supports it, upload the complete ZIP as-is so the layer and drill files stay together.
 
 ### 3. Assemble the board
 
@@ -77,13 +78,13 @@ A typical assembly order is:
 
 ### 4. Print the case
 
-The matching case parts are in [`models/`](models/). Print `Upper Case.stl` and `Bottom Case.stl`, then test-fit the PCB before final assembly. Confirm dimensions and mounting hardware against the current PCB before printing a large batch.
+The matching case parts are in [`models/`](models/). Print `Upper Case.stl` and `Bottom Case.stl`, then test-fit the PCB before final assembly. Confirm dimensions and mounting hardware against the case before committing to the final print.
 
 ## Firmware
 
 This repository currently contains the hardware design, manufacturing files, BOM, and case models. It does **not** include keyboard firmware or a keymap.
 
-After assembly, the RP2040 Zero will need firmware configured for the 3×4 key matrix, both rotary encoders, their push switches, and the WS2812B underglow chain. A firmware project such as QMK or KMK can be used, but the GPIO assignments should be taken from `macropad_v3.kicad_sch` rather than assumed from the physical key positions.
+After assembly, the RP2040 Zero will need firmware configured for the 3×4 key matrix, both rotary encoders, their push switches, and the WS2812B underglow chain. A firmware project such as QMK or KMK can be used to map the keys and encoder functions.
 
 ## Design tools
 
