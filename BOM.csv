@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet","DK_Datasheet_Link","DK_Detail_Page"
+"C1,C2,C3,C4","4","C","","","","Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder","","",""
+"D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12","12","","","","","ScottoKeebs_Components:Diode_SOD-123","","",""
+"D13,D14,D15,D16","4","WS2812B","","","","LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm","https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf","",""
+"S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12","12","","","","","ScottoKeebs_Scotto:MX_Solder_1.00u","","",""
+"S13,S14","2","PEC11R-4215F-S0024","","","","digikey-footprints:Rotary_Encoder_Switched_PEC11R","https://www.bourns.com/docs/Product-Datasheets/PEC11R.pdf","https://www.bourns.com/docs/Product-Datasheets/PEC11R.pdf","/product-detail/en/bourns-inc/PEC11R-4215F-S0024/PEC11R-4215F-S0024-ND/4499665"
+"U2","1","RP2040_Zero","","","","ScottoKeebs_MCU:RP2040_Zero","","",""
