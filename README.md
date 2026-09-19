@@ -1,6 +1,6 @@
 # Omni Pad
 
-Omni Pad is a compact 3×4 macropad PCB with 12 MX-compatible keys, two push-capable rotary encoders, and addressable RGB underglow. It is built around an RP2040 Zero and is intended for custom short-circuit- and power-sensitive keyboard builds.
+Omni Pad is a compact 3×4 macropad PCB with 12 MX-compatible keys, two push-capable rotary encoders, and addressable RGB underglow. It is built around an RP2040 Zero and is intended for custom shortcuts, media controls, editing workflows, and other keyboard automation.
 
 > **Hardware revision:** The KiCad design and manufacturing outputs are named `macropad_v3`, while this repository is the `omnipad_v4` project.
 
